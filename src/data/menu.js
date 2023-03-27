@@ -1,10 +1,10 @@
 module.exports = [
     {
         label: "Halo",
-        url: "/halo/",
+        url: "halo/",
     },
     {
         label: "Component",
-        url: "/component/",
+        url: "component/",
     },
 ];

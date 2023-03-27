@@ -1,7 +1,8 @@
 module.exports = function (eleventyConfig) {
 
-    eleventyConfig.addGlobalData("isBuild", function () {
-        return process.env.ELEVENTY_RUN_MODE !== 'serve';
+    eleventyConfig.addGlobalData("baseUrl", function () {
+        const deployUrl = "http://hayyi2.github.io/eleventy-bootstrap-starter/"
+        return process.env.ELEVENTY_RUN_MODE !== 'serve' ? deployUrl : '/'
     });
 
     eleventyConfig.setServerOptions({
