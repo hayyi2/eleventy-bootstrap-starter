@@ -12,7 +12,7 @@
                     {% for item in menu %}
                         {% set isActive = true if item.url == page.url or (item.url == '' and page.url == '/') or (item.url != '' and item.url in page.url) else false %}
                         <li class="nav-item">
-                            <a class="nav-link{{ " active" if isActive else "" }}" aria-current="page" href="{{ item.url }}">{{ item.label }}</a>
+                            <a class="nav-link{{ " active" if isActive else "" }}" aria-current="page" href="{{ baseUrl + item.url }}">{{ item.label }}</a>
                         </li>
                     {% endfor %}
                 </ul>
